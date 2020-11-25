@@ -9,11 +9,12 @@ export class WinnerForm {
 
     public async show(): Promise<void> {
         const giftCode = Reply.createFromSerializedReply(
-            await (
+            (await (
                 await fetch('backend/gift-code', {
                     method: 'GET',
                 })
-            ).json()
+            ).json())
+                .serializedReply
         ).logIfError().getValue();
 
         this.element.querySelector(".gift-code")!.innerHTML = `Your gift code: ${giftCode}`;
