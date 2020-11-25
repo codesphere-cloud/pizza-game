@@ -1,7 +1,8 @@
 import express from 'express';
 import {createAndConnectMSSQLDatabase} from "./stubs/MSSQLDatabase";
 import {config} from './config';
-import {GiftCodeDao} from "./GiftCodeDao";
+import {GiftCodeDao, OUT_OF_GIFT_CODES_STATUS} from "./GiftCodeDao";
+import { equal } from './helpers/equal';
 
 (async () => {
     const db = await createAndConnectMSSQLDatabase(config.db.reconnectConfig, config.db.mssqlConfig, true);
@@ -26,7 +27,10 @@ import {GiftCodeDao} from "./GiftCodeDao";
             return;
         }
 
-        blacklist.push(ip);
+        if(!equal(giftCode, OUT_OF_GIFT_CODES_STATUS)) {
+            blacklist.push(ip);
+        }
+
 
         response.send(giftCode);
     });

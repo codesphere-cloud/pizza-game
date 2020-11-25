@@ -2,6 +2,8 @@ import {SqlDatabase, SqlQuery} from "./stubs/SqlDatabase";
 import {isEmpty} from "./helpers/isEmpty";
 import { Reply } from "./helpers/Reply";
 
+export const OUT_OF_GIFT_CODES_STATUS = Reply.okStatus("Sorry, we ran out of gift codes.");
+
 export class GiftCodeDao {
     private readonly db;
     public constructor(db: SqlDatabase<'mssql'>) {
@@ -20,7 +22,7 @@ export class GiftCodeDao {
         }
 
         if(isEmpty(dbResponse.getValue())) {
-            return Reply.okStatus("Sorry, we ran out of gift codes.");
+            return OUT_OF_GIFT_CODES_STATUS;
         }
 
         const giftCode = dbResponse.getValue().pop()!.code;
