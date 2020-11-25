@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "strict": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "incremental": true,
+    "removeComments": true,
+    "lib": [
+      "ES2017",
+      "dom"
+    ],
+    "types": [
+      "jest"
+    ],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": [
+    "**/__test__/**",
+    "**/__mock__/**",
+    "**/lib/**"
+  ],
+  "types": [
+    "jest",
+    "dom"
+  ],
+  "rootDir": "src/ts",
+  "outDir": ".build-tmp/js",
+  "tsBuildInfoFile": ".build-tmp/tsconfig.tsbuildinfo",
+  "baseUrl": "src"
+}

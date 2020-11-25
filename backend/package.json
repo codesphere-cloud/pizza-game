@@ -1,0 +1,25 @@
+{
+  "name": "pizza-game-backend",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "_deleteLib": "rimraf lib",
+    "_deleteBuildTmp": "rimraf .build-tmp",
+    "_deleteNodeModules": "rimraf node_modules",
+    "clean": "run-p _deleteLib _deleteNodeModules _deleteBuildTmp",
+    "build": "tsc",
+    "watch": "nodemon -e js --watch ./lib --delay 1 ./lib/index.js",
+    "run": "node lib/index.js"
+  },
+  "dependencies": {
+    "express": "4.17.1",
+    "mssql": "^6.2.1",
+    "@types/mssql": "^6.0.5",
+    "@types/express": "^4.17.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.2",
+    "@types/node": "^14.14.9",
+    "nodemon": "^2.0.6"
+  }
+}

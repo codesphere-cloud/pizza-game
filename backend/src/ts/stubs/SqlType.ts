@@ -1,0 +1,38 @@
+/**
+ * All available sql data types.
+ */
+export enum SqlType {
+    VarChar = "VarChar",
+    NVarChar = "NVarChar",
+    Text = "Text",
+    Int = "Int",
+    BigInt = "BigInt",
+    TinyInt = "TinyInt",
+    SmallInt = "SmallInt",
+    Bit = "Bit",
+    Float = "Float",
+    Numeric = "Numeric",
+    Decimal = "Decimal",
+    Real = "Real",
+    Date = "Date",
+    DateTime = "DateTime",
+    DateTime2 = "DateTime2",
+    DateTimeOffset = "DateTimeOffset",
+    SmallDateTime = "SmallDateTime",
+    Time = "Time",
+    UniqueIdentifier = "UniqueIdentifier",
+    SmallMoney = "SmallMoney",
+    Money = "Money",
+    Binary = "Binary",
+    VarBinary = "VarBinary",
+    Image = "Image",
+    Xml = "Xml",
+    Char = "Char",
+    NChar = "NChar",
+    NText = "NText",
+    TVP = "TVP",
+    UDT = "UDT",
+    Geography = "Geography",
+    Geometry = "Geometry",
+    Variant = "Variant"
+}

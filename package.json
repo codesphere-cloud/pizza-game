@@ -1,0 +1,18 @@
+{
+  "name": "pizza-game",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "watch": "lerna run watch"
+  },
+  "yarnWorkspaces": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
