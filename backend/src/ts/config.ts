@@ -2,7 +2,7 @@ import {milliSecondsInAMinute} from "./helpers/timeSpan";
 import {MILLSECONDS_IN_A_MINUTE} from "./helpers/timeConstants";
 
 export const config = {
-    port: 3000,
+    port: 3001,
     db: {
         reconnectConfig: {
             maxReconnects: 10,
