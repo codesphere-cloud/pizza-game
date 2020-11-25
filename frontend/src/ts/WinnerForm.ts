@@ -8,6 +8,7 @@ export class WinnerForm {
     }
 
     public async show(): Promise<void> {
+        
         const giftCode = Reply.createFromSerializedReply(
             (await (
                 await fetch('backend/gift-code', {
