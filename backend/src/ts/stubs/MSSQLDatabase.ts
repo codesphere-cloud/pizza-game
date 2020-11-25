@@ -171,6 +171,6 @@ export async function createAndConnectMSSQLDatabase(reconnectConfig: ReconnectCo
             status.log() :
             Reply.errStatus('Connecting to the database failed because of an unknown reason.').log();
     }, reconnectConfig, mssqlConfig, logErrors);
-    await db.connect();
+    (await db.connect()).logIfError();
     return db;
 }

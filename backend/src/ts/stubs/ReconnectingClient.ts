@@ -1,6 +1,6 @@
-import { has } from "../helpers/has";
-import { wait } from "../helpers/wait";
-import { Reply, Status, okReply, errStatus } from "../helpers/Reply";
+import {has} from "../helpers/has";
+import {wait} from "../helpers/wait";
+import {errStatus, okReply, Reply, Status} from "../helpers/Reply";
 
 export interface ReconnectConfig {
     /**
@@ -48,9 +48,9 @@ export abstract class ReconnectingClient {
             this.isConnecting = true;
             (async (): Promise<void> => {
                 let connectionStatus = null;
-                while (
-                    (!has(connectionStatus) || connectionStatus.notOk())
-                    && this.reconnectCounter < this.maxReconnects) {
+                while ((!has(connectionStatus) || connectionStatus.notOk())
+                && this.reconnectCounter < this.maxReconnects) {
+
                     if (has(connectionStatus)) {
                         connectionStatus.log();
                         okReply(`Reconnecting to external service... (attempts left: ${this.maxReconnects -

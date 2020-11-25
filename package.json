@@ -5,7 +5,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build": "lerna run build",
-    "watch": "lerna run watch"
+    "watch": "lerna run watch",
+    "run": "lerna run run"
   },
   "yarnWorkspaces": true,
   "workspaces": [

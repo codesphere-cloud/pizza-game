@@ -5,8 +5,11 @@ export class WinnerForm {
         this.element = domElement
     }
 
-    public show(giftCode: string) {
-        this.element.querySelector(".gift-code")!.innerHTML = `Your gift code: ${giftCode}`
+    public async show(): Promise<void> {
+        const giftCode = await fetch('/backend/gift-code', {
+            method: 'GET',
+        });
+        this.element.querySelector(".gift-code")!.innerHTML = `Your gift code: ${await giftCode.text()}`
         this.element.classList.remove("hidden");
     }
 }

@@ -74,11 +74,8 @@ export class Slot {
         if (this.isWinning(this.nextSymbols)) {
             this.autoPlayCheckbox.checked = false;
             console.log("YOU WON!!!");
-            window.setTimeout(async () => {
-                const giftCode = await fetch('/backend/gift-code', {
-                    method: 'GET',
-                });
-                this.winnerForm.show(await giftCode.text());
+            window.setTimeout(() => {
+                this.winnerForm.show();
             }, 500);
         }
 
