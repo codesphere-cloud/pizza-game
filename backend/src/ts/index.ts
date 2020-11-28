@@ -15,10 +15,12 @@ import {equal} from './helpers/equal';
 
         console.log(ip);
 
+        /*
         if (blacklist.includes(ip)) {
             response.send("You already won your gift code.");
             return;
         }
+         */
 
         const giftCode = await giftCodeDao.claimNextCode();
 
