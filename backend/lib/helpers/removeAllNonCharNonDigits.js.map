@@ -1,0 +1,1 @@
+{"version":3,"file":"removeAllNonCharNonDigits.js","sourceRoot":"","sources":["../../src/ts/helpers/removeAllNonCharNonDigits.ts"],"names":[],"mappings":";;;AAAA,+BAA0B;AAOnB,MAAM,0BAA0B,GAAG,CAAC,KAAa,EAAU,EAAE;IAChE,IAAI,CAAC,SAAG,CAAC,KAAK,CAAC,EAAE;QACb,OAAO,KAAK,CAAC;KAChB;IACD,OAAO,KAAK,CAAC,OAAO,CAAC,gBAAgB,EAAE,EAAE,CAAC,CAAC;AAC/C,CAAC,CAAC;AALW,QAAA,0BAA0B,8BAKrC"}

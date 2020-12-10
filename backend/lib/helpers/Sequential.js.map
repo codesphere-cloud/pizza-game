@@ -1,0 +1,1 @@
+{"version":3,"file":"Sequential.js","sourceRoot":"","sources":["../../src/ts/helpers/Sequential.ts"],"names":[],"mappings":";;;AAAA,MAAa,UAAU;IAInB,YAAmB,QAAgB,CAAC;QAChC,IAAI,CAAC,UAAU,GAAG,KAAK,CAAC;IAC5B,CAAC;IAEM,SAAS;QACZ,OAAO,IAAI,CAAC,UAAU,EAAE,CAAC;IAC7B,CAAC;CAEJ;AAZD,gCAYC"}
